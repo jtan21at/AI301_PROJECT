@@ -22,7 +22,7 @@ This addresses the reproduced unrecognized-hash case. Other structurally malform
 
 Update before posting: this comment is being posted after a local implementation, not before the build. The two-file change described above is implemented, committed as `a861730`, and pushed to `fix/72-invalid-password-hash` in my fork: the direct call now prints `False`, the targeted test reports `1 passed`, and the full security module reports `25 passed`. No implementation changes beyond the plan were needed.
 
-AI assistance: I used the Zed assistant to review the reproduction, draft this plan, implement the narrow fix, and run validation. The resulting diff is available for review; this commit contains only the two source/test files, not the local plan drafts.
+AI assistance: I  review the reproduction, draft this plan, implement the narrow fix, and run validation. The resulting diff is available for review; this commit contains only the two source/test files, not the local plan drafts.
 
 
 ## Your branch
