@@ -8,9 +8,7 @@ jtan21at
 
 **Plan comment**
 
-NOT POSTED — pending student approval. No permalink exists yet.
-The text below is a draft, NOT claimed as a posted comment. Replace this
-status with the actual permalink and exact posted text after publication.
+https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-6011483709
 
 My plan for #72 builds on [my reproduction](https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-5884640208) at `2f4e82f52efbcfcc57d65b3fa5348672163ca088` (Windows, Python 3.13.12, Passlib 1.7.4, bcrypt 4.3.0).
 
@@ -24,7 +22,7 @@ This addresses the reproduced unrecognized-hash case. Other structurally malform
 
 Update before posting: this comment is being posted after a local implementation, not before the build. The two-file change described above is implemented, committed as `a861730`, and pushed to `fix/72-invalid-password-hash` in my fork: the direct call now prints `False`, the targeted test reports `1 passed`, and the full security module reports `25 passed`. No implementation changes beyond the plan were needed.
 
-AI assistance: I reviewed the reproduction, draft this plan, implement the narrow fix, and run validation. The resulting diff is available for review; this commit contains only the two source/test files, not the local plan drafts.
+AI assistance: I used the Zed assistant to review the reproduction, draft this plan, implement the narrow fix, and run validation. The resulting diff is available for review; this commit contains only the two source/test files, not the local plan drafts.
 
 
 ## Your branch
@@ -37,7 +35,7 @@ Committed as a8617308aff2fa7149a50fbd14f6c5c74e9fa80b and pushed to origin/fix/7
 
 Branch: https://github.com/jtan21at/pathreview-ai301-fa26-s3/tree/fix/72-invalid-password-hash
 
-The comment text above is an updated draft reflecting the pushed commit. It has not been posted.
+The comment text above is copied exactly from the published GitHub comment.
 
 **Evidence**
 
@@ -200,9 +198,9 @@ reasonable working explanation paired with a bounded verification plan.
 ## Outstanding submission actions and process deviations
 
 - Review every implementation diff before keeping or committing it.
-- Approve and post the plan comment; insert its real permalink and exact text.
+- Completed: the plan comment is posted; its verified permalink and exact text appear above.
 - Completed: the fork commit contains only core/security.py and tests/unit/test_security.py; plan.md and comment.md were excluded.
-- Completed: the fix branch is pushed to the fork. Course-repo artifacts are being committed and pushed separately.
+- Completed: the fix branch and course-repo artifacts are pushed; this comment-link update is committed separately.
 - Ask staff whether this transparently labeled, non-harness evaluation is acceptable.
 - Public posting will follow the local build, unlike the assignment's post-before-build order.
 - Submit the whole course repository URL in the portal and enter actual hours spent.

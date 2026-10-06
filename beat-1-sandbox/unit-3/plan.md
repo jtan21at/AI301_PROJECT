@@ -4,7 +4,7 @@ Issue: https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72
 Fork: https://github.com/jtan21at/pathreview-ai301-fa26-s3
 Reproduction: https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-5884640208
 
-This plan was reviewed by the current Zed assistant using the installed plan-check rubric, not Claude CLI. The issue body, relevant maintainer/student thread comments, and docs/CONTRIBUTING.md were checked. The comment is prepared but not yet publicly posted.
+This plan was reviewed by the current Zed assistant using the installed plan-check rubric, not Claude CLI. The issue body, relevant maintainer/student thread comments, and docs/CONTRIBUTING.md were checked. The plan comment is published: https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-6011483709
 
 ## Diagnosis and quoted reproduction evidence
 
@@ -72,10 +72,10 @@ If a propagation test is added, monkeypatch `pwd_context.verify` to raise `Runti
 - Swallowing broad exceptions could hide backend faults; catch only the observed Passlib exception.
 - Keep the Unit 2 dependency versions for comparable evidence; bcrypt compatibility warnings are not automatically part of this issue.
 - Removing strict xfail is required: leaving it in place would turn a correct fix into a failing XPASS.
-- The issue explicitly requires removing its xfail marker. docs/CONTRIBUTING.md requires an issue-number branch, relevant tests, and green checks for a future PR; do not claim full CI is green from a targeted module run. Relevant thread review found the student's claim and reproduction and no additional maintainer constraints. The plan comment discloses Zed AI assistance and is not yet posted.
+- The issue explicitly requires removing its xfail marker. docs/CONTRIBUTING.md requires an issue-number branch, relevant tests, and green checks for a future PR; do not claim full CI is green from a targeted module run. Relevant thread review found the student's claim and reproduction and no additional maintainer constraints. The published plan comment discloses Zed AI assistance: https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-6011483709
 
 ## Deviations
 
 The implementation followed the proposed two-file change: catch only UnknownHashError and remove the issue-specific xfail marker. No extra propagation test was added; existing valid-password and wrong-password controls remained passing. The direct call now prints False, the targeted test reports 1 passed, and the complete security module reports 25 passed. Raw commands and output are saved in tests-before.txt and tests-after.txt.
 
-Process deviations:   both skill evaluation and live plan review were performed by the   Claude CLI. The 20-package review was frozen before reading gold labels, then independently compared with the answer key (18/20 agreement);   Public plan posting remains pending student approval, so the build occurred before the public plan comment rather than after it as the assignment requests. These alternatives require staff acceptance and are not claimed to fulfill the official eval or post-before-build requirements.
+Process deviations: Skill evaluation and live plan review were performed by the Zed assistant, not Claude CLI; the Claude quota was exhausted. The 20-package review was frozen before reading gold labels, then compared with the answer key (18/20 agreement); it is an unofficial review, not a harness-generated result. The plan comment was published after the local build and push, rather than before the build as the assignment requests. Published comment: https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-6011483709. These alternatives require staff acceptance and are not claimed to fulfill the official eval or post-before-build requirements.
