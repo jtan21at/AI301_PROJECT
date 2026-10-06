@@ -154,7 +154,7 @@ and git diff --check passed; full application CI was not run.
 **Run history**
 
 No official Claude harness run occurred: Claude quota was exhausted.
-One informal Zed assistant review covered all 20 scored Markdown packages,
+One   review covered all 20 scored Markdown packages,
 using the authored skill before reading gold labels. It produced 5 accept
 and 15 reject verdicts. An answer-key comparison performed afterward found
 18/20 agreement: clear-accept 5/7, scope-creep 4/4, wrong-cause 4/4,
