@@ -1,0 +1,19 @@
+# Rubric: is this pull request ready to submit?
+
+## Checks
+
+| Check | Evidence | Pass condition | Weight |
+|---|---|---|---|
+| silent-drift | Plan context's intended behavior, in/out scope, named files or areas and deviation notes, paired with every diff hunk and the PR title/description's fidelity claims; issue and repro define the original outcome. | The diff delivers the plan's bounded outcome or a concretely disclosed, justified revision tied to the same issue. Necessary implementation and regression-test files need not have been individually enumerated. Material additions, omissions, and behavior changes are reconciled in plan/deviation context and accurately described; no silent scope expansion, unexplained incomplete implementation, or contradicted fidelity claim remains. An honest narrower outcome can pass when its limits and reason are explicit and it still meaningfully addresses the issue, not merely conceals the symptom. | required |
+| not-tested | Candidate test-evidence commands or manual steps, inputs, environment, before/after observations and captures, paired with the plan's test plan, original repro, changed code, and repo-facts or live docs specifying checks. | There is observable evidence exercising the actual changed path with the issue trigger and a discriminating expected-after result; relevant controls are covered or their omission is specifically disclosed and justified. Applicable repo checks have recorded outcomes, or an explicit reason they could not run with the limitation and remaining validation stated. Bare “tests pass,” copied logic, irrelevant suite results, or unexplained absent repo checks do not suffice. Failed checks or omitted secondary checks may pass this readiness check when actual failure/limitation, reason, and residual risk are honestly disclosed, meaningful fix evidence remains, and no explicit repo hard gate forbids submission. Never label a failed or unverified test passed. | required |
+| unreviewable | Complete unified diff's changed files and hunks and candidate commit list, compared with the bounded plan and deviations. | A reviewer can isolate and understand the issue-sized change: no unrelated hunks, debugging leftovers, dead or commented-out replacement code, generated debris, or avoidable formatting churn obscures it. Necessary generated output, formatting, comments, and support changes are allowed when causally required and explained. Multiple commits, terse prose, or a large but necessary hunk are not failures on their own. | required |
+| standards-wall | Repo facts' actual template asks, contribution and AI-use policy, actionable maintainer thread requests, and PR title/description; in live mode also verified scope house rules. | The outgoing text meaningfully supplies every applicable requested item and honors explicit direction and submission rules, including required disclosure when AI assistance was used. Judge content, not matching headings or boilerplate layout, unless an explicit rule demands that form. No template or no AI policy means no invented requirement in eval mode. Placeholder text is not real content; a material policy ask cannot be rescued by good code or tests. Required testing disclosures can describe an honest failure instead of claiming success, unless policy explicitly requires a passing result to submit. | required |
+
+## Verdict rule
+
+Return `accept` only if every required check is `pass`. Any required `fail`
+or `unclear` produces `reject`. Preferred checks, if defined later, never
+change the verdict. Execute all checks; no averaging or category override.
+A pass on not-tested means adequate honest submission evidence, not that
+all tests passed. Disclosure does not excuse hidden drift, an empty proof,
+unreviewable work, or an explicit hard submission gate.

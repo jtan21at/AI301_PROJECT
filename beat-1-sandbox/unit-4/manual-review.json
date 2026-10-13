@@ -1,0 +1,202 @@
+[
+  {
+    "item": "pkg-01",
+    "checks": [
+      {"name": "silent-drift", "grade": "fail", "evidence": "tokenizer.c adds a pending-capacity reservation at tokenize_bytes entry immediately before the existing identical reservation, not before bulk copies after end_line padding as planned; the claimed pending-copy fix is not delivered by the supplied hunk."},
+      {"name": "not-tested", "grade": "fail", "evidence": "The captured repro changes 99999 to 100000, but required pre-commit has no outcome or omission explanation; parser-suite and clean-ASAN statements are reports, not captured successful runs."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The complete diff contains only the tokenizer reservation hunk and the short-rows/wide-field regression test; no unrelated churn or debugging debris appears."},
+      {"name": "standards-wall", "grade": "fail", "evidence": "Required pandas checklist content is absent: no Closes #66657 in the description, no pre-commit outcome, and no latest-whatsnew entry in the diff despite the bugfix requirement."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-02",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "All three save_* methods export with clear=False and clear after the write context completes; defaults and export API remain unchanged, matching the bounded plan."},
+      {"name": "not-tested", "grade": "pass", "evidence": "The failed-save transcript retains 'IMPORTANT OUTPUT\\n' after FileNotFoundError versus an empty recording before; the described successful-save control and regression assertions check clearing; pytest outcome is reported, not independently captured."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "console.py's three matching save hunks, the failed/successful-save regression test, and the required CHANGELOG entry all serve the same recording-loss fix."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "Description explains #4208 and the approach, supplies 'Type of changes: Bug fix', and the diff adds the requested CHANGELOG entry; no AI policy is captured."}
+    ],
+    "verdict": "accept"
+  },
+  {
+    "item": "pkg-03",
+    "checks": [
+      {"name": "silent-drift", "grade": "fail", "evidence": "Despite 'Implements the posted plan exactly' and 'No other behavior changes', the diff rewrites truncate (dropping leading-root preservation) and adds resolve_symlinks, an explicitly excluded config-surface change without a deviation note."},
+      {"name": "not-tested", "grade": "fail", "evidence": "The symlink transcript observes the restored logical path, but new truncation semantics and resolve_symlinks have no observable validation or disclosed omission; physical-path and cargo outcomes are reports only."},
+      {"name": "unreviewable", "grade": "fail", "evidence": "The unrelated truncate rewrite and resolve_symlinks config/default hunks contaminate the otherwise issue-sized fallback change."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "The fix(directory) title is conventional; description, motivation with Closes #7648, and How Has This Been Tested supply the requested substantive content; no screenshot is made explicitly mandatory for this textual prompt fix."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-04",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "None if cfg!(windows) adds --RAW-CONTROL-CHARS only for the failed Windows version probe; non-Windows and built-in pager behavior remain outside the change, with a supporting flag test and changelog."},
+      {"name": "not-tested", "grade": "fail", "evidence": "'Tested locally on Windows 11 with less-Windows: colors work now in paging mode' gives no actual command, observed distinguishing output, or explicit -R control result; 'cargo test passes' alone is not observable fix proof."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "Only the fallback flag derivation, a Windows-only flag assertion, and its CHANGELOG entry are changed; the explanatory comment states the causal role."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "The contribution asks for tests and CHANGELOG content are met by tests/pager_flags.rs and the Unreleased bugfix entry; no template or AI policy is captured."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-05",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "keybindings.rs matches name, mode, modifier, and keycode and calls warn_once on replacement; the two regression cases and non-unique-name explanation match the planned outcome and thread discussion."},
+      {"name": "not-tested", "grade": "pass", "evidence": "Before/after tables show the same-name char_r and up bindings both surviving only after the change; same-key replacement warning and keybindings-list control are concretely reported, with cargo/fmt/clippy outcomes recorded as reports rather than captured passes."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The identity comparison, replacement warning, and two same-name regression tests are the entire bounded diff, without unrelated edits or debris."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "Description explains #18848, implementation details, and both contributors' open concerns; User-facing changes states preserved bindings and the replacement warning, satisfying the template."}
+    ],
+    "verdict": "accept"
+  },
+  {
+    "item": "pkg-06",
+    "checks": [
+      {"name": "silent-drift", "grade": "fail", "evidence": "GlobalAppSettings.idl adds MenuFollowsWindowTheme and Initialize renames theme/event plumbing although settings and other theme plumbing were excluded; no deviation reconciles these with 'No functional changes outside the system menu fix'."},
+      {"name": "not-tested", "grade": "fail", "evidence": "Alt+space steps report dark-to-light menu observations, but the additional setting and renamed event plumbing have no corresponding validation or explained omission; attached screenshots are referenced, not supplied, and unit success is only reported."},
+      {"name": "unreviewable", "grade": "fail", "evidence": "The unrelated _themeRevoker/_HandleThemeChange/_chromeBrush renaming and new GlobalAppSettings property obscure the bounded menu-theme change."},
+      {"name": "standards-wall", "grade": "unclear", "evidence": "Requested prose sections and issue link are present and the diff uses no identified private API, but required signed CLA status is not supplied; 'schema n/a' also conflicts with the new IDL settings property."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-07",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "runner_fix.go resolves each edit.Pos, groups by filename, applies each group to that file, and warns/skips unresolved positions, matching the planned fix-applier scope without analyzer changes."},
+      {"name": "not-tested", "grade": "fail", "evidence": "The only captured run is ./onefile/ with exit 0 and the new test groups two a.go edits; neither exercises the essential a.go/b.go cross-file failure, and the planned project suite is missing without explanation."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The complete diff is limited to the grouped fix application and adjacent grouping test; no unrelated feature or debugging leftovers appear."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "The required brief description explains the diagnostic-file assumption and per-edit resolution; this is neither a linter update nor a new linter, so author/discussion restrictions do not apply."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-08",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "The files-controller guard rejects untracked-only stashing before Prompt, names the include-untracked binding through i18n, and adds the planned integration test without changing stash semantics or UserConfig."},
+      {"name": "not-tested", "grade": "pass", "evidence": "Concrete before/after key steps record the toast, no name prompt, and retained untracked.txt; the staged tracked-change control still creates a stash; integration/go-test/generate outcomes are recorded reports, not independently captured runs."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The guard, TranslationSet/English text, and untracked-only integration scenario are causally necessary parts of one UX fix, with no unrelated churn."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "PR Description explains #5883; Requirements supplies cheatsheet generation/no diff, formatting, integration coverage, internationalisation, and no UserConfig changes, matching every applicable checklist ask."}
+    ],
+    "verdict": "accept"
+  },
+  {
+    "item": "pkg-09",
+    "checks": [
+      {"name": "silent-drift", "grade": "fail", "evidence": "The diff adds --time-format and changes global print_error punctuation plus other flag help, despite explicit exclusions of new flags/other errors and the description's 'exactly as planned'; no deviation explains them."},
+      {"name": "not-tested", "grade": "fail", "evidence": "Captured invalid-day and typo results distinguish the intended errors, but the unplanned --time-format/global error behavior has no issue-relevant evidence or disclosed test limitation; cargo success is only reported."},
+      {"name": "unreviewable", "grade": "fail", "evidence": "The new time_format option, unrelated flag-help rewrites, and src/error.rs punctuation change contaminate the time-filter error fix."},
+      {"name": "standards-wall", "grade": "fail", "evidence": "Captured contribution rules require tests for behavior changes and a CHANGELOG entry, but neither tests nor CHANGELOG appears in the complete diff despite the description claiming an entry."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-10",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "Both desktop sync agents receive autoSelectFamilyAttemptTimeout: 2000 and the adjacent test asserts the option, without disabling Happy Eyeballs or touching mobile, retries, or per-target config."},
+      {"name": "not-tested", "grade": "fail", "evidence": "A day of Koofr use with zero ETIMEDOUT does not demonstrate the controlled ~350 ms connection trigger; 'no further testing seemed necessary' supplies neither yarn-test outcome nor an inability/remaining-risk explanation."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The two agent-option additions, causal comment, and option assertions are the entire issue-sized diff, with no unrelated edits."},
+      {"name": "standards-wall", "grade": "fail", "evidence": "The description references #16215 and the change is minimal, but the explicit contribution requirement to pass yarn test is unmet: no suite run/result is supplied."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-11",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "gitignore.rs replaces unconditional space trimming with odd-backslash-aware trimming and adds escaped/double-backslash assertions, without changing other whitespace or parser semantics."},
+      {"name": "not-tested", "grade": "pass", "evidence": "The supplied printf/rg/touch/rg --files steps observe no dangling-backslash error and exclusion of 'foo ' after the change, with git parity and double-backslash regression assertions; cargo outcome remains a reported result."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The trim call/helper and adjacent gitignore regression test are focused and explained; no unrelated formatting or debugging debris appears."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "The focused description identifies #3477 and tests; it explicitly declares AI-assisted code with human review/understanding and states the maintainer-facing text is in the author's own words, consistent with the captured AI policy."}
+    ],
+    "verdict": "accept"
+  },
+  {
+    "item": "pkg-12",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "controller.rs uses saturating_add(1) and VecDeque::new above MAX_PREALLOC while retaining line-range semantics, and adds the planned huge-offset integration regression."},
+      {"name": "not-tested", "grade": "pass", "evidence": "The exact huge-offset command now prints l1/l2 and captured exit 0 versus the original exit-101 abort; :-4 is reported unchanged and the integration/cargo outcome is recorded as a report, not a captured suite pass."},
+      {"name": "unreviewable", "grade": "fail", "evidence": "controller.rs retains a commented DBG print, commented-out alternative deque allocation, an unused _unused_buffer_probe, and unrelated TODO/no-op loop churn, obscuring the small allocation fix."},
+      {"name": "standards-wall", "grade": "fail", "evidence": "A regression test is added, but the mandatory CHANGELOG entry is absent from the complete diff despite the description saying 'CHANGELOG entry included'."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-13",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "ui.lua caret-escapes & | ^ < > only in the Windows start argument; the code and description explicitly retain the plan's justified %VAR% deferral rather than claiming complete URL escaping."},
+      {"name": "not-tested", "grade": "pass", "evidence": "Windows-11 repro records exit 1/truncated URL before and exit 0/empty stderr/full two-parameter browser URL after; no-ampersand control is reported unchanged and the functional-spec command/outcome is recorded, not independently captured."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The Windows escaping hunk and mocked-command regression test are tightly scoped; comments explain cmd re-parsing and the deliberately deferred percent expansion."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "Problem and Solution supply issue-specific content for #41337, the fix(ui) title/commit follow the captured convention, and a behavior regression test accompanies the change."}
+    ],
+    "verdict": "accept"
+  },
+  {
+    "item": "pkg-14",
+    "checks": [
+      {"name": "silent-drift", "grade": "fail", "evidence": "The promised regression for JSON defaults is replaced by test_header_casing_preserved, explicitly outside the accepted header-casing scope; no deviation reconciles that omission with 'Implements the plan'."},
+      {"name": "not-tested", "grade": "fail", "evidence": "The only captured request is GET with X-Custom-Header and no JSON body; neither single-header POST x=1 nor its Content-Type/two-header control is exercised, and 'All tests pass' is unverified."},
+      {"name": "unreviewable", "grade": "fail", "evidence": "The added casing-preservation GET test covers an unrelated excluded concern instead of making the JSON-header normalization fix reviewable through its actual regression."},
+      {"name": "standards-wall", "grade": "fail", "evidence": "Contribution rules require tests accompanying the change and a passing suite; the only new test does not cover the JSON-body bug and no command or suite result supports the bare all-tests-pass claim."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-15",
+    "checks": [
+      {"name": "silent-drift", "grade": "fail", "evidence": "The limit-raise and accept-backoff behaviors match the plan, but the promised limit-helper unit test is absent without a deviation note and the diff retains unrelated init_session formatting/debug support."},
+      {"name": "not-tested", "grade": "pass", "evidence": "The ulimit-64/six-tab steps record survival beyond tab four and the 64-to-unlimited server log; a forced-hard-limit-64 observation records retry logging without server death; cargo outcome is a report, not a captured successful suite."},
+      {"name": "unreviewable", "grade": "fail", "evidence": "lib.rs retains DEBUG eprintln, commented fd/lsof probes, #[allow(dead_code)] count_open_fds, and unrelated ClientAttributes compression, contaminating the startup/listener fix."},
+      {"name": "standards-wall", "grade": "unclear", "evidence": "The PR references #5474, but the explicit pass-cargo-test requirement is supported only by a bare 'cargo test -p zellij-server passes' report; no captured suite result establishes that gate."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-16",
+    "checks": [
+      {"name": "silent-drift", "grade": "unclear", "evidence": "The shared DoLoadImages now returns an error on total failure although plan/description say start-time tolerance is preserved; no start caller is supplied to establish whether it absorbs this new error, so start-path fidelity cannot be verified."},
+      {"name": "not-tested", "grade": "pass", "evidence": "Captured corrupt-tar load prints an invalid-tar error and exit 1, while alpine.tar exits 0 and appears in guest docker images; touched-package go-test outcome is recorded as a report, with start-path behavior unproven."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The aggregation, load-command error surfacing, and all-targets-failed unit test are the whole focused diff; no unrelated churn is present."},
+      {"name": "standards-wall", "grade": "unclear", "evidence": "Release-note-quality title, fixes #23471, and before/after examples satisfy the template, but the captured Kubernetes CLA requirement has no signed-status evidence in the bundle."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-17",
+    "checks": [
+      {"name": "silent-drift", "grade": "fail", "evidence": "The plan names warning plus documentation as two deliverables, but the complete diff has no docs page while title/description claim documentation and 'in full'; no narrower-outcome deviation is disclosed."},
+      {"name": "not-tested", "grade": "fail", "evidence": "The dev sealed-object warning is observed, but the required documentation rendering has no evidence and no docs change exists; shallowReactive coverage is also absent without explanation, and production/suite success is only reported."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The warning guard and sealed/frozen regression tests are focused and contain no unrelated hunks or debris, even though a promised deliverable is missing."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "The fix(reactivity) title, issue-specific problem description for #14893, and behavior regression tests satisfy the captured conventional-title/problem/tests asks; the false completion claim is addressed under silent-drift."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-18",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "print_help_banner gates ANSI constants on stdout.is_terminal and the new test checks piped output; config use-colors remains explicitly deferred, with no other output behavior added."},
+      {"name": "not-tested", "grade": "pass", "evidence": "The piped help grep count is captured as 214 before and 0 after; tty colored sections are concretely reported and cargo/fmt/clippy outcomes recorded as reports, with referenced screenshot not available for inspection."},
+      {"name": "unreviewable", "grade": "fail", "evidence": "src/command.rs retains a commented eprintln!(help colors: tty=...) debug probe and unnecessary import/no-op print-hunk churn in a small conditional-color change."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "Description supplies #18850, stdout-tty approach, and config limitation; User-facing changes explains plain piped/redirected help, fulfilling the applicable template content."}
+    ],
+    "verdict": "reject"
+  },
+  {
+    "item": "pkg-19",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "The vendored single-quoted emitter removes the indentation/whitespace reset at its break site and adds the exact issue-input round-trip scenario, matching the accepted narrow emitter plan."},
+      {"name": "not-tested", "grade": "pass", "evidence": "Before/after YAML shows corrected closing-quote indentation and the captured diff command prints IDENTICAL; double-quoted/no-trailing-blank controls are reported unchanged and go-test totals are recorded reports, not captured suite proof."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The vendor edit is the explicitly planned emitter fix, not generated debris; its causal comment and exact-input operator regression are the only changes."},
+      {"name": "standards-wall", "grade": "pass", "evidence": "Captured contribution policy asks only for tests with fixes; operator_style_test.go adds the issue-input regression and the description identifies #2819, with no template or AI requirement invented."}
+    ],
+    "verdict": "accept"
+  },
+  {
+    "item": "pkg-20",
+    "checks": [
+      {"name": "silent-drift", "grade": "pass", "evidence": "Config.zig exempts .theme from irrelevant-key rejection and updates single-theme plus unrelated-key tests, exactly within the maintainer's minimal conditional-state direction without GTK/query changes."},
+      {"name": "not-tested", "grade": "pass", "evidence": "The isolated dark-window debug query records ESC[?997;2n before and ESC[?997;1n after; conditional-pair control is reported unchanged and zig-build-test outcome is recorded as a report, not a captured successful suite."},
+      {"name": "unreviewable", "grade": "pass", "evidence": "The relevance condition and two nearby conditional-state tests are the complete focused diff, with no unrelated hunks or debugging debris."},
+      {"name": "standards-wall", "grade": "unclear", "evidence": "The strict policy requires tool/extent disclosure for any AI use and a vouch flow for first-time contributors, but the bundle supplies neither assistance provenance nor contributor/vouch status; do not guess that AI was used or that this contributor is first-time."}
+    ],
+    "verdict": "reject"
+  }
+]

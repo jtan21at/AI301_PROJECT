@@ -1,0 +1,10 @@
+{
+  "item": "codepath/pathreview-ai301-fa26-s3#72@a8617308aff2fa7149a50fbd14f6c5c74e9fa80b",
+  "checks": [
+    {"name": "silent-drift", "grade": "pass", "evidence": "Current fork plan and complete main...HEAD diff agree: catch only UnknownHashError in core/security.py and remove issue #72's xfail in tests/unit/test_security.py; optional propagation-test omission and narrow hash coverage are disclosed."},
+    {"name": "not-tested", "grade": "pass", "evidence": "Six complete repro/check blocks match test_evidence.md; actual trigger changes from UnknownHashError to False, targeted test passes and security module reports 25 passed; unit 376 passed/52 xfailed, lint and typecheck exit 0; expected integration zero collection exits pytest 5/make 2 and is honestly unticked; Unit 4 permits CI pending at creation."},
+    {"name": "unreviewable", "grade": "pass", "evidence": "Inspected complete main...HEAD diff and sole fix(api) commit a8617308: exactly two source/test files, 5 insertions and 5 deletions, no unrelated hunks or documentation; tracked working tree matches HEAD and four local markdown drafts remain untracked."},
+    {"name": "standards-wall", "grade": "pass", "evidence": "Actual template's six sections have substantive content, Closes #72 and generic AI assistance disclosure are present; own-fork fix/72-invalid-password-hash targets scoped repository/main; Unit 4 lines 154-177 require CI unticked at opening and exempt its result from course grading, without removing green CI as a maintainer-review gate."}
+  ],
+  "verdict": "accept"
+}
