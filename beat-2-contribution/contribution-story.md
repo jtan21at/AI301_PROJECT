@@ -55,10 +55,11 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: [one line on the tool work]**
+**Unit 5: Built a Python/Windows issue scout and recorded setup blockers**
 
-[2-4 sentences: what you built (the scout, your strategy), what broke
-or fell short, what changed because of it.]
+2026-11-08
+
+I configured my issue scout for small Python bug fixes or test tasks that can be reproduced on Windows without a GPU, paid API, large refactor, or complex deployment. My installed Unit 1 skill was missing and the course backup's rubric was empty, so I restored the baseline, preserved its evidence guide, and authored maintenance, scope, availability, and contribution-policy checks plus traceable search and ranking rules. Official CLI downloads failed twice with HTTP 504, so I recorded the blocker rather than claiming that authentication, query validation, or a scan succeeded. My next steps are to complete CLI setup, inspect the real query results and top-five judgments, and grade two or three picks from the course Issue Selection site.
 
 **Unit 6: [one line on the tool work]**
 
