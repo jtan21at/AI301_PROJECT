@@ -61,11 +61,11 @@ one in the week it belongs to.
 
 I restored and upgraded my missing Unit 1 skill into an issue scout for small Python bug fixes or tests on Windows without GPU or paid-API requirements, authoring the recovered empty rubric while preserving its evidence guide. After resolving the official CLI download blocker with a verified asset download, I executed three authored queries, deduplicated 299 results, ranked 275 survivors, and informally graded the fixed top five without invoking the paid course-model scan. The initial ranking overrepresented an idea board and one new repository, while source timestamps conflicted with the declared reference date, so I held uncertain checks, preserved the original read-out, and revised ranking to exclude idea-only labels and limit one result per repository without claiming an unrun improvement. After signing into the course Issue Selection site, I also completed direct reviews of three site-listed candidates and rejected all three because live claims or implementation PRs made them unavailable, leaving final issue selection, upstream claiming and reproduction pending rather than inventing a contribution.
 
-**Unit 6: [one line on the tool work]**
+**Unit 6: Installed the upstream voice guard and relaxed only the scope gate**
 
-[2-4 sentences: the voice-guard, the repo-memory file. What broke or
-fell short, and what changed because of it. "Nothing broke" counts when
-it is true - say how you know.]
+2026-11-11 — preparation complete; issue selection pending
+
+I consolidated my existing voice rules into one canonical guide, preserved the later disclosure rule, and added concrete wrong/right examples for claims, questions and follow-ups. I installed the official guard with an absolute Windows command and verified that a direct body-less hook payload stops before posting; this was a no-model wiring test, not proof of automatic session integration or a completed draft voice review. I replaced my strict bounded-contribution check with the course's scope-feasible floor and difficulty notes, then informally reassessed the three previous candidates using their preserved evidence: scope no longer blocks them, but their existing claims or implementation PRs still do. Six additional course-site searches did not yield a confirmed available fit, so my final issue, claim, repository-specific memory file and reproduction remain pending rather than being presented as completed.
 
 **Unit 7: [one line on the tool work]**
 
