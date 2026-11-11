@@ -55,11 +55,11 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: Built a Python/Windows scout and screened real candidates**
+**Unit 5: Ran the scout funnel and checked course-site picks against live evidence**
 
-2026-11-09 — partial progress
+2026-11-10
 
-I configured a scout for small Python bug fixes or test tasks reproducible on Windows without a GPU, paid API, large refactor, or complex deployment, restoring the missing Unit 1 files and replacing the recovered empty rubric with explicit maintenance, scope, availability, and contribution-policy checks. After two official CLI download attempts returned HTTP 504, I used read-only public GitHub searches and individual issue reviews as a documented fallback, not the prescribed CLI scan or a completed top-five scan. Those reviews ruled out rigseal #4, tunnelscope #84, and pyrite #1421 because of active claims or implementation PRs, showing why an empty assignee field is insufficient and why my availability check must also inspect comments and PR links. [spec-kitty #4058](https://github.com/spec-kitty/spec-kitty/issues/4058) is a provisional Windows test-fixture candidate rather than a chosen issue: current-version reproduction, final availability checks, and course-site eligibility remain unconfirmed, and I have not claimed it or begun implementation.
+I restored and upgraded my missing Unit 1 skill into an issue scout for small Python bug fixes or tests on Windows without GPU or paid-API requirements, authoring the recovered empty rubric while preserving its evidence guide. After resolving the official CLI download blocker with a verified asset download, I executed three authored queries, deduplicated 299 results, ranked 275 survivors, and informally graded the fixed top five without invoking the paid course-model scan. The initial ranking overrepresented an idea board and one new repository, while source timestamps conflicted with the declared reference date, so I held uncertain checks, preserved the original read-out, and revised ranking to exclude idea-only labels and limit one result per repository without claiming an unrun improvement. After signing into the course Issue Selection site, I also completed direct reviews of three site-listed candidates and rejected all three because live claims or implementation PRs made them unavailable, leaving final issue selection, upstream claiming and reproduction pending rather than inventing a contribution.
 
 **Unit 6: [one line on the tool work]**
 
