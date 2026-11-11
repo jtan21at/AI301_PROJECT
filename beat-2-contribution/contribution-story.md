@@ -67,10 +67,11 @@ I restored and upgraded my missing Unit 1 skill into an issue scout for small Py
 
 I consolidated my existing voice rules into one canonical guide, preserved the later disclosure rule, and added concrete wrong/right examples for claims, questions and follow-ups. I installed the official guard with an absolute Windows command and verified that a direct body-less hook payload stops before posting; this was a no-model wiring test, not proof of automatic session integration or a completed draft voice review. I replaced my strict bounded-contribution check with the course's scope-feasible floor and difficulty notes, then informally reassessed the three previous candidates using their preserved evidence: scope no longer blocks them, but their existing claims or implementation PRs still do. Six additional course-site searches did not yield a confirmed available fit, so my final issue, claim, repository-specific memory file and reproduction remain pending rather than being presented as completed.
 
-**Unit 7: [one line on the tool work]**
+**Unit 7: Installed the global ship-gate and tested its no-model stop paths**
 
-[2-4 sentences: the ship-gate and your gate manifest. What it produced
-on your real branch, what fought you, what changed because of it.]
+2026-11-11 — preparation only; no contribution branch yet
+
+I installed the official ship-gate package and its settings hook without selecting a repository, preserving the existing voice guard and backing up the previous sandbox scope before installing the real-repository pr-precheck scope. I replaced the generated hook command with absolute Windows Python and script paths, then verified four direct payload checks: both guards stop a PR creation command with no readable description and ignore a read-only issue query. These checks cost no model credit and do not establish automatic session integration, a reviewed branch or a full ship-gate PASS. My project-specific manifest, baseline commands, fix, regression evidence and PR remain pending until I choose an eligible available issue, so I have not invented check commands or treated this preparation as shipped work.
 
 **Unit 8: [one line on the tool work]**
 
