@@ -55,11 +55,11 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: Built a Python/Windows issue scout and recorded setup blockers**
+**Unit 5: Built a Python/Windows scout and screened real candidates**
 
-2026-11-08
+2026-11-09 — partial progress
 
-I configured my issue scout for small Python bug fixes or test tasks that can be reproduced on Windows without a GPU, paid API, large refactor, or complex deployment. My installed Unit 1 skill was missing and the course backup's rubric was empty, so I restored the baseline, preserved its evidence guide, and authored maintenance, scope, availability, and contribution-policy checks plus traceable search and ranking rules. Official CLI downloads failed twice with HTTP 504, so I recorded the blocker rather than claiming that authentication, query validation, or a scan succeeded. My next steps are to complete CLI setup, inspect the real query results and top-five judgments, and grade two or three picks from the course Issue Selection site.
+I configured a scout for small Python bug fixes or test tasks reproducible on Windows without a GPU, paid API, large refactor, or complex deployment, restoring the missing Unit 1 files and replacing the recovered empty rubric with explicit maintenance, scope, availability, and contribution-policy checks. After two official CLI download attempts returned HTTP 504, I used read-only public GitHub searches and individual issue reviews as a documented fallback, not the prescribed CLI scan or a completed top-five scan. Those reviews ruled out rigseal #4, tunnelscope #84, and pyrite #1421 because of active claims or implementation PRs, showing why an empty assignee field is insufficient and why my availability check must also inspect comments and PR links. [spec-kitty #4058](https://github.com/spec-kitty/spec-kitty/issues/4058) is a provisional Windows test-fixture candidate rather than a chosen issue: current-version reproduction, final availability checks, and course-site eligibility remain unconfirmed, and I have not claimed it or begun implementation.
 
 **Unit 6: [one line on the tool work]**
 
