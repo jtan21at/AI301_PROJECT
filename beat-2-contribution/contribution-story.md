@@ -8,9 +8,8 @@ format criteria grade exactly that. Your course repo link is the whole submissio
 files and no evidence uploads are part of Assignment 5.
 
 **Contribution Number:** [1]
-**Student:** [Student name]
-**GitHub Username:** [your GitHub username, exactly as it appears on your profile - no @, no
-profile URL. Your comments upstream are identified by this name.]
+**Student:** Jianwen Tan
+**GitHub Username:** jtan21at
 **Issue:** [GitHub issue link]
 **Pull Request:** [GitHub PR link, once opened]
 
@@ -73,10 +72,11 @@ I consolidated my existing voice rules into one canonical guide, preserved the l
 
 I installed the official ship-gate package and its settings hook without selecting a repository, preserving the existing voice guard and backing up the previous sandbox scope before installing the real-repository pr-precheck scope. I replaced the generated hook command with absolute Windows Python and script paths, then verified four direct payload checks: both guards stop a PR creation command with no readable description and ignore a read-only issue query. These checks cost no model credit and do not establish automatic session integration, a reviewed branch or a full ship-gate PASS. My project-specific manifest, baseline commands, fix, regression evidence and PR remain pending until I choose an eligible available issue, so I have not invented check commands or treated this preparation as shipped work.
 
-**Unit 8: [one line on the tool work]**
+**Unit 8: Installed the read-only PR monitor and kept unevidenced timing rules blocked**
 
-[2-4 sentences: the PR-monitor and your playbook. What it read, what it
-drafted, what you did with the draft.]
+2026-11-11 — preparation only; no Assignment 5 PR yet
+
+I installed the official PR monitor unchanged and drafted response, nudge and walk-away rules using my upstream voice guide. Because I have not selected the contribution repository, I intentionally left its staleness threshold empty rather than inventing a review cadence without the required five external merged-PR samples. Six free local safety checks confirmed that write commands are rejected before a subprocess runs and that the incomplete playbook refuses a drafting run, but no actual PR state or model-generated move was produced. I kept this preparation separate from the classroom PR and will complete the repository-specific threshold, real PR query and draft decision only after the new contribution exists.
 
 ---
 
